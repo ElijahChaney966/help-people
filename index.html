@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Get Help Now</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+      max-width: 750px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      margin-top: 1.5em;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 6px;
+      margin: 10px 0 20px;
+    }
+
+    .hotline {
+      border: 1px solid #ccc;
+      padding: 16px;
+      margin: 16px 0;
+      border-radius: 6px;
+    }
+
+    .hotline a {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #444;
+      margin-top: 30px;
+    }
+
+    /* PRINT FRIENDLY */
+    @media print {
+      select, button {
+        display: none;
+      }
+      body {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Get Help Now</h1>
+<p>Free, confidential support. You are not wasting anyone’s time.</p>
+
+<label for="country">Country:</label><br>
+<select id="country" onchange="showHotlines()">
+  <option value="us">United States</option>
+  <option value="uk">United Kingdom</option>
+  <option value="ca">Canada</option>
+  <option value="au">Australia</option>
+</select>
+
+<!-- UNITED STATES -->
+<div id="us">
+  <div class="hotline">
+    <a href="tel:988">988 – Suicide & Crisis Lifeline</a>
+    <p>Call or text for immediate emotional support.</p>
+  </div>
+  <div class="hotline">
+    <a href="tel:8006624357">1-800-662-HELP</a>
+    <p>Mental health & substance use support.</p>
+  </div>
+  <div class="hotline">
+    <a href="tel:8007848669">1-800-QUIT-NOW</a>
+    <p>Free help to stop smoking.</p>
+  </div>
+</div>
+
+<!-- UK -->
+<div id="uk" style="display:none;">
+  <div class="hotline">
+    <a href="tel:116123">Samaritans – 116 123</a>
+    <p>24/7 emotional support.</p>
+  </div>
+  <div class="hotline">
+    <a href="tel:111">NHS 111</a>
+    <p>Urgent health and mental health advice.</p>
+  </div>
+</div>
+
+<!-- CANADA -->
+<div id="ca" style="display:none;">
+  <div class="hotline">
+    <a href="tel:988">988 – Talk Suicide Canada</a>
+    <p>Call or text for crisis support.</p>
+  </div>
+</div>
+
+<!-- AUSTRALIA -->
+<div id="au" style="display:none;">
+  <div class="hotline">
+    <a href="tel:131114">Lifeline – 13 11 14</a>
+    <p>24/7 crisis support.</p>
+  </div>
+</div>
+
+<h2>Helping Someone Else?</h2>
+<p>
+Stay calm. Listen more than you talk. You don’t need perfect words — just stay with them
+and help them make the call if they’re willing.
+</p>
+
+<p class="note">
+If someone is in immediate danger, contact local emergency services.
+</p>
+
+<script>
+  function showHotlines() {
+    const countries = ["us", "uk", "ca", "au"];
+    const selected = document.getElementById("country").value;
+    countries.forEach(c =>
+      document.getElementById(c).style.display =
+        c === selected ? "block" : "none"
+    );
+  }
+</script>
+
+</body>
+</html>
