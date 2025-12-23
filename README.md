@@ -19,7 +19,7 @@ This project is designed to be **fast, reliable, and accessible**, with a focus 
 ## Live Demo
 
 You can access the website here:  
-`https://yourusername.github.io/help-people/`
+`https://ElijahChaney966.github.io/help-people/`
 
 ---
 
@@ -28,4 +28,4 @@ You can access the website here:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/help-people.git
+git clone https://github.com/ElijahChaney966/help-people.git
